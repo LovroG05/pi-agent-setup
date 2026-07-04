@@ -1,0 +1,10 @@
+# Secrets and auth
+auth.json
+.env
+.env.local
+
+# Session data
+sessions/
+
+# Generated/local overrides
+*.local.json

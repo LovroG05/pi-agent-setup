@@ -1,0 +1,6 @@
+{
+  "lastChangelogVersion": "0.80.3",
+  "theme": "dark",
+  "defaultProvider": "gateway",
+  "defaultModel": "llamacpp/qwen3-27b"
+}

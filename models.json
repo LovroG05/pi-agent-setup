@@ -1,0 +1,51 @@
+{
+  "providers": {
+    "gateway": {
+      "baseUrl": "${PI_GATEWAY_BASE_URL}",
+      "api": "openai-completions",
+      "apiKey": "${PI_GATEWAY_API_KEY}",
+      "models": [
+        {
+          "id": "llamacpp/qwen3-27b",
+          "name": "Qwen3 27B (Local)",
+          "reasoning": true,
+          "input": ["text"],
+          "contextWindow": 98304,
+          "maxTokens": 16384,
+          "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 },
+          "compat": {
+            "thinkingFormat": "qwen-chat-template"
+          }
+        },
+        {
+          "id": "openrouter/z-ai/glm-5.2",
+          "name": "GLM 5.2 (Architect)",
+          "reasoning": true,
+          "thinkingLevelMap": {
+            "off": null,
+            "minimal": null,
+            "low": "high",
+            "medium": "high",
+            "high": "high",
+            "xhigh": "xhigh"
+          },
+          "input": ["text"],
+          "contextWindow": 1048576,
+          "maxTokens": 32768,
+          "cost": { "input": 0.93, "output": 3.00, "cacheRead": 0, "cacheWrite": 0 },
+          "compat": { "thinkingFormat": "openrouter" }
+        },
+        {
+          "id": "openrouter/moonshotai/kimi-k2.7-code",
+          "name": "Kimi K2.7 Code (Implementer)",
+          "reasoning": true,
+          "input": ["text", "image"],
+          "contextWindow": 262144,
+          "maxTokens": 16384,
+          "cost": { "input": 0.74, "output": 3.50, "cacheRead": 0, "cacheWrite": 0 },
+          "compat": { "thinkingFormat": "openrouter" }
+        }
+      ]
+    }
+  }
+}
