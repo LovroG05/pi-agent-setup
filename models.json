@@ -1,9 +1,9 @@
 {
   "providers": {
     "gateway": {
-      "baseUrl": "${PI_GATEWAY_BASE_URL}",
+      "baseUrl": "https://lmr.govekar.net/v1",
       "api": "openai-completions",
-      "apiKey": "${PI_GATEWAY_API_KEY}",
+      "apiKey": "!sed -n 's/^PI_GATEWAY_API_KEY=//p' ~/.pi/agent/.env",
       "models": [
         {
           "id": "llamacpp/qwen3-27b",
